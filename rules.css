@@ -1,0 +1,107 @@
+/* src/styles.css */
+* {
+    box-sizing: border-box;
+}
+
+
+/* src/styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/olfu.png'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keep the background image fixed during scroll */
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+
+}
+
+.navbar {
+    position: fixed; /* Fixes the navbar at the top of the page */
+    top: 0; /* Aligns it with the top of the viewport */
+    left: 0; /* Aligns it with the left edge */
+    width: 100%; /* Full width */
+    background-color: rgb(0, 123, 0); /* Background color */
+    padding: 15px 20px; /* Padding for spacing */
+    display: flex; /* Flexbox layout */
+    justify-content: space-evenly; /* Distributes space evenly */
+    align-items: center; /* Vertically centers the content */
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for better visibility */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+
+}
+
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+
+
+.nav-links a:hover {
+    color: #004d00; /* Darker green */
+}
+
+.rules-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #28a745;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    max-height: 800px;
+    margin: 200px auto;
+    box-sizing: border-box;
+}
+
+.rules-container h1, 
+.rules-container h2 {
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.rules-container p {
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.rules-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.rules-container li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}

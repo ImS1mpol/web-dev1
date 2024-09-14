@@ -1,0 +1,186 @@
+/* src/styles.css */
+* {
+    box-sizing: border-box;
+}
+
+
+/* src/styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/olfu.png'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keep the background image fixed during scroll */
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+
+}
+
+.navbar {
+    position: fixed; /* Fixes the navbar at the top of the page */
+    top: 0; /* Aligns it with the top of the viewport */
+    left: 0; /* Aligns it with the left edge */
+    width: 100%; /* Full width */
+    background-color: rgb(0, 123, 0); /* Background color */
+    padding: 15px 20px; /* Padding for spacing */
+    display: flex; /* Flexbox layout */
+    justify-content: space-evenly; /* Distributes space evenly */
+    align-items: center; /* Vertically centers the content */
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for better visibility */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+
+}
+
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #004d00; /* Darker green */
+}
+
+/* Section styling */
+.section1, .section2, .section3, .section4 {
+    position: relative; /* Make sure pseudo-elements are positioned relative to these sections */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide anything that overflows the section */
+}
+
+/* Keep background images for each section */
+.section1::before, .section2::before, .section3::before, .section4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-color: #d3d3d3; /* Light gray (newspaper-like) background color */
+    background-blend-mode: multiply; /* Optional: blend mode for overlay */
+    filter: grayscale(100%) contrast(90%); /* Full grayscale and reduced contrast */
+    z-index: -1; /* Place behind the content */
+}
+.section1::before {
+    background-image: url('img/pcbg.jpg');
+}
+
+.section2::before {
+    background-image: url('img/pythonbg.jpg');
+}
+
+.section3::before {
+    background-image: url('img/javabg.jpg');
+}
+
+.section4::before {
+    background-image: url('img/cbg.jpg');
+}
+
+/* Flex container styling */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flex items styling */
+.flex-items {
+    width: 300px; /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    background-color: rgb(217, 217, 217); /* Slightly transparent background for readability */
+    margin: 10px; /* Adjusted margin */
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border: 1px solid white; /* Adjusted border width */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Adjusted padding */
+    box-shadow: 15px 15px 1px 0px rgb(166, 166, 166); /* Solid white box shadow */
+}
+
+
+.flex-items.box1 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the image fits within the box without being stretched */
+}
+
+/* Box2 styling (text content area) */
+.box2 {
+    width: 700px; /* Adjusted width */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center; /* Center the content horizontally */
+    padding: 15px; /* Adjusted padding */
+    text-align: left;
+}
+
+.box2 h2 {
+    margin: 0;
+    font-size: 2.5rem; /* Adjusted font size */
+    margin-top: 20px; /* Adjusted top margin */
+    text-align: start;
+}
+
+.box2 p {
+    margin: 15px 0; /* Adjusted vertical margin */
+    font-size: 1.2rem; /* Adjusted font size */
+}
+
+.join-button {
+    background-color: rgb(166, 166, 166);
+    color: rgb(0, 0, 0);
+    padding: 18px 25px; /* Adjusted padding */
+    text-decoration: none;
+    font-size: 18px; /* Adjusted font size */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px; /* Adjusted top margin */
+    align-self: center; /* Center the button within the flexbox */
+    display: inline-block;
+    box-shadow: 8px 8px 1px 0px rgb(0, 0, 0); /* Solid white box shadow */
+
+}
+
+.join-button:hover {
+    background-color: rgb(0, 123, 0);
+    transform: scale(1.05);
+}

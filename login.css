@@ -1,0 +1,252 @@
+/* src/styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/olfu.png'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keep the background image fixed during scroll */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust height if navbar has different height */
+    margin: 0; /* Remove margin to ensure full width usage */
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: #ffffff; /* Text color to contrast with background */
+    align-items: center;
+}
+
+.left-side h1 {
+    font-size: 5.5rem;
+    text-align: center;
+    margin: 0 0 10px 0; /* Remove margin-left and set margin-bottom */
+    color: white;
+    max-width: 1000px;
+}
+
+.left-side p {
+    font-size: 1.5rem; /* Adjust font size for better readability */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 800px;
+    color: white;
+    text-align: center;
+}
+
+.right-side {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.login-container {
+    padding: 30px; /* Increase padding for a larger form area */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px; /* Increase maximum width for a larger form */
+}
+
+.login-container h2 {
+    margin-bottom: 30px; /* Increase margin for better spacing */
+    font-size: 2rem; /* Increase font size for heading */
+    color: #ffffff;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 10px; /* Increase margin for better spacing */
+    font-size: 1rem; /* Increase font size for labels */
+    color: #ffffff;
+}
+
+.login-container input {
+    margin-bottom: 20px; /* Increase margin for better spacing */
+    padding: 15px; /* Increase padding for larger input fields */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.1rem; /* Increase font size for better readability */
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Increase margin for better spacing */
+}
+
+.options label {
+    font-size: 1rem; /* Increase font size for options labels */
+    color: #ffffff;
+}
+
+.options a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem; /* Increase font size for options links */
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 15px; /* Increase padding for larger button */
+    background-color: #007B00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem; /* Increase font size for button */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 15px; /* Increase margin for better spacing */
+    font-size: 1rem; /* Increase font size for paragraphs */
+    color: white;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* styles.css */
+
+/* General Alert Style */
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 10px auto; /* Center the alert box */
+}
+
+/* General Alert Style */
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 10px auto; /* Center the alert box */
+}
+
+/* Alert Styles for Different Types */
+.alert-danger {
+    background-color: #dc3545; /* Red for error */
+    border: 1px solid #dc3545;
+}
+
+/* Optional: Styling for close button */
+.alert .close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .left-side h1 {
+        font-size: 3rem; /* Smaller text on tablets */
+    }
+
+    .left-side p {
+        font-size: 1rem; /* Smaller text on tablets */
+    }
+
+    .login-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .login-container input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .alert {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-side h1 {
+        font-size: 2rem; /* Smaller text on phones */
+    }
+
+    .left-side p {
+        font-size: 0.9rem; /* Smaller text on phones */
+    }
+
+    .container {
+        flex-direction: column; /* Ensure proper stacking */
+    }
+
+    .right-side {
+        order: 1; /* Move login container below text */
+        padding: 15px;
+    }
+
+    .login-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .login-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .login-container input {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .alert {
+        max-width: 100%;
+    }
+}
